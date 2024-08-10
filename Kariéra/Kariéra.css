@@ -1,0 +1,152 @@
+:root{
+    --main-color:#90c226;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* NAVBAR */
+.logo{
+    color: var(--main-color);
+    cursor: pointer;
+    font-size: 25px;
+}
+.logo:hover{
+    color: var(--main-color);
+}
+
+nav{
+    align-items: center !important;
+
+}
+ul{
+    margin: 0;
+    list-style: none; 
+}
+nav .nav-item .nav-link{
+   padding: 0 1rem;
+   font-size: 20px;
+}
+nav .nav-item .nav-link:hover{
+    border-bottom: solid 2px var(--main-color);
+}
+nav .nav-item .nav-link:focus{
+    border-bottom: solid 2px var(--main-color);
+}
+nav .btn-close{
+    display: none;
+}
+.show .btn-close{
+    display: block;
+}
+/* END OF NAVBAR */
+.bg-image{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    top: 0;
+}
+
+/* SIDEBAR */
+.hamburger-lines{
+    display: none;
+}
+.sidebar-wrapper{
+    z-index:1;
+    position: absolute;
+    width:0;
+    height:100%;
+    overflow-y:hidden;
+    background: var(--main-color);
+    transition:all .5s;
+    display:flex;
+    align-items:center;
+}
+
+.sidebar-wrapper .header{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    top: 17px;
+    flex-wrap: wrap;
+}
+.menuDisplayed {
+    width: 100%;
+ }
+.sidebar-wrapper .header button{
+    font-size:1.5em;
+    opacity: 0;
+}
+.menuDisplayed .header button{
+    opacity: 1;
+    transition-delay: .5s;
+}
+
+
+
+#menu-toggle{
+	transition:all .3s;
+	font-size:2em;
+}
+
+
+.sidebar-nav{
+    padding:0;
+    list-style:none; 
+    transition:all .5s;
+    width:100%;
+    text-align:center;
+}
+
+.sidebar-nav li{  
+    width:100%;
+    transition:all .3s;
+    padding:10px;
+    font-size: 1.5em;
+}
+
+.sidebar-nav li a {
+    display:block;
+    text-decoration:none;
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+.sidebar-nav li a:hover{
+    background:black;
+    color:white;
+}
+.hide{
+    visibility: hidden;
+}
+
+/* END OF SIDEBAR */
+@media only screen and (max-width: 980px) {
+    
+    .hamburger-lines {
+        cursor: pointer;
+        display: block;
+        height: 26px;
+        width: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: white;
+    }
+    .hide-menu{
+        display: none !important;
+    }
+    
+}
